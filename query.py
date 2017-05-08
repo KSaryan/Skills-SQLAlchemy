@@ -31,15 +31,15 @@ init_app()
 # association table manage?
 #   2. An association table is a table that links two tables together. There may
 # be two tables, for example, a table of children and a table of toys. One child may 
-# play with many toys at oncee, and a toy may be played with by several children at once. The 
+# play with many toys at once, and a toy may be played with by several children at once. The 
 # relationship between these two tables is many to many. But you can't really do that,
 # so you create an association table, playtime, to manage that relationship. Playtime will 
 # have a one to many relationship with the children and toys tables (each child can have one 
 # playtime, and each toy one playtime, but playtime can have many children and toys).We don't
 # actually want any information about the playtime besides who was playing with what.
-# And playtime won't save any information besides child_id and toy_id. We never will
+# And playtime won't contain any information besides playtime_id, child_id and toy_id. We never will
 # be querying playtime, just using the relationship it creates to allow us to run queries 
-# about which (or how many) toys kids are playing with and which (or how many) kids are 
+# about which (or how many) toys a kid is playing with and which (or how many) kids are 
 # playing with a toy. If we kept information, like when the play happened or for how long,
 # then playtime would by a middle table.
 
